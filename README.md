@@ -1,2 +1,2 @@
-# myblog
-My blog, my theme
+# hugo-theme-sangam
+Sangam a simple theme for Hugo
