@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    {{- partial "head.html" . -}}
+
+<body>
+
+    <div class="container">
+
+
+            {{- partial "header.html" . -}}
+
+
+        <div id="content" class="row">
+            <style>
+
+
+                div.post, div#comments 
+                {
+                    
+                    background:none;
+                padding-left:0;
+                    
+                }
+                </style>
+                
+         <section  class="col-md-9">
+
+            <div id="blogcontent">
+
+		
+                <div class="post full">
+         <h1 id="blog">Blog</h1>
+        <p><span class="low-top quiet large-bottom"><a href="/blog/archives" class="small quiet">Archives</a></span></p>
+             
+        
+
+
+        <article>
+            <header>
+            <h2 class="prepend-top"><a href="/blog/2020/10/18/partitioned-browser-cache.html">Partitioned Browser Cache Starting Chrome v86</a></h2>
+            <h3 class="datetext" style="float:left">
+            Posted on 18 Oct 2020
+            </h3>
+            <div class="tag-list hidden-xs" style="display:inline"> <a href="/blog/tags/HTTP/">HTTP</a> </div>
+            </header>
+            
+            
+            <div class="c">&nbsp;</div>
+            <div class="hidden-xs">
+            <p>Starting Chrome v86, browser cache is going to be partitioned which are going to have interesting consequences. What does it mean? Previously, if you would have loaded a file such as js, css from a CDN from a particular site (lets say Facebook) was cached in the browser cache and available to be used from cache even in a different site (lets say Reddit) But this is changing now, which means that a cache is...</p>
+            <footer>
+            <p><a href="/blog/2020/10/18/partitioned-browser-cache.html">Read more...</a></p>
+            </footer>
+            </div>
+            </article>
+
+
+
+
+
+    
+    </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {{.Content}}
+
+
+        </section>
+            <aside id="secondary" class="col-md-3 visible-md visible-lg">
+                {{- partial "blog-right.html" . -}}
+            </aside>
+            
+            <div class="c"></div>
+
+        </div>
+
+       
+        {{- partial "footer.html" . -}}
+
+    </div>
+</body>
+
+</html>

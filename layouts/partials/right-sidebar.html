@@ -1,0 +1,14 @@
+<div class="category">
+<h3>Latest Posts</h3>
+
+{{ $latestcount := .Site.Params.LatestCount | default 5 }}
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- range (first $latestcount $pages) -}}
+{{ $dateformat := .Site.Params.DateFmt | default "Jan 02, 2006" }}
+
+<h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4><time datetime="{{ .Date.Format $dateformat }}" pubdate="pubdate" class="date">{{ .Date.Format $dateformat }}</time>
+
+{{- end -}}
+
+
+</div>
