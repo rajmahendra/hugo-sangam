@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    {{- partial "head.html" . -}}
+
+<body>
+
+    <div class="container">
+
+
+            {{- partial "header.html" . -}}
+
+
+        <div id="content" class="row">
+            <style>
+
+
+                div.post, div#comments 
+                {
+                    
+                    background:none;
+                padding-left:0;
+                    
+                }
+                </style>
+                
+         <section  class="col-md-9">
+
+            <div id="blogcontent">
+
+		
+                <div class="post full">
+         <h1 id="blog">Blog</h1>
+        <p><span class="low-top quiet large-bottom"><a href="/blog/archives" class="small quiet">Archives</a></span></p>
+             
+        
+
+        
+       
+
+    </div>
+        </section>
+
+
+
+        </div>
+
+       
+        {{- partial "footer.html" . -}}
+
+    </div>
+</body>
+
+</html>

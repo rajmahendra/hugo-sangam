@@ -1,0 +1,45 @@
+<div class="category">
+
+
+    <div class="category">
+        <h3>Latest Posts</h3>
+     <ul class="sidebar">
+
+        {{ $latestcount := .Site.Params.LatestCount | default 5 }}
+        {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+        {{- range (first $latestcount $pages) -}}
+        {{ $dateformat := .Site.Params.DateFmt | default "Jan 02, 2006" }}
+
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> </li>
+
+        {{- end -}}
+    
+    </ul>
+    </div>
+
+
+    <div class="category tagcloud">
+        <h3>Tags</h3>
+       TAG CLOUD
+        </div>
+
+
+
+        <div class="category">
+            <h3>Top Commenters</h3>
+            <script type="text/javascript" src="http://madhur.disqus.com/top_commenters_widget.js?num_items=5&hide_mods=0&hide_avatars=0&avatar_size=32"></script>
+            </div>
+
+
+
+
+            <div class="category">
+                <h3>Archives</h3>
+                Archives
+                
+                </div>
+
+
+
+
+</div>
